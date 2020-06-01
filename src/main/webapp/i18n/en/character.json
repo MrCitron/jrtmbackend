@@ -1,0 +1,26 @@
+{
+  "jrtmbackendApp": {
+    "character": {
+      "home": {
+        "title": "Characters",
+        "createLabel": "Create a new Character",
+        "createOrEditLabel": "Create or edit a Character",
+        "notFound": "No Characters found"
+      },
+      "created": "A new Character is created with identifier {{ param }}",
+      "updated": "A Character is updated with identifier {{ param }}",
+      "deleted": "A Character is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Character {{ id }}?"
+      },
+      "detail": {
+        "title": "Character"
+      },
+      "name": "Name",
+      "type": "Type",
+      "level": "Level",
+      "race": "Race",
+      "profession": "Profession"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "jrtmbackendApp": {
+    "race": {
+      "home": {
+        "title": "Races",
+        "createLabel": "Créer un nouveau Race",
+        "createOrEditLabel": "Créer ou éditer un Race",
+        "notFound": "Aucun Race trouvé"
+      },
+      "created": "Un nouveau Race a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Race avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Race avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Race {{ id }} ?"
+      },
+      "detail": {
+        "title": "Race"
+      },
+      "name": "Name"
+    }
+  }
+}

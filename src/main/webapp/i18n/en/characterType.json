@@ -1,0 +1,9 @@
+{
+  "jrtmbackendApp": {
+    "CharacterType": {
+      "null": "",
+      "PC": "PC",
+      "NPC": "NPC"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Character",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "CharacterType",
+      "fieldValues": "PC,NPC"
+    },
+    {
+      "fieldName": "level",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "race",
+      "otherEntityRelationshipName": "character",
+      "relationshipName": "race",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "profession",
+      "otherEntityRelationshipName": "character",
+      "relationshipName": "profession",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200601235138",
+  "entityTableName": "character",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
