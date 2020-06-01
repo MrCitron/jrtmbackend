@@ -1,0 +1,25 @@
+enum CharacterType {
+	PC, NPC
+}
+
+entity Character {
+	name String
+    type CharacterType
+    level Integer
+}
+
+entity Race {
+    name String
+}
+
+entity Profession {
+    name String
+}
+
+relationship ManyToOne {
+    Character{race} to Race
+}
+
+relationship ManyToOne {
+    Character{profession} to Profession
+}
