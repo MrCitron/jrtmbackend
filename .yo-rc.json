@@ -38,6 +38,8 @@
     "enableTranslation": true,
     "nativeLanguage": "fr",
     "languages": ["fr", "en"],
-    "blueprints": []
+    "blueprints": [],
+    "herokuAppName": "jrtmbackend",
+    "herokuDeployType": "git"
   }
 }
