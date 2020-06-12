@@ -1,9 +1,9 @@
 package com.familleosman.jrtm.web.rest;
 
 import com.familleosman.jrtm.domain.Character;
+import com.familleosman.jrtm.domain.enumeration.CharacterType;
 import com.familleosman.jrtm.repository.CharacterRepository;
 import com.familleosman.jrtm.web.rest.errors.BadRequestAlertException;
-
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
@@ -85,9 +85,13 @@ public class CharacterResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of characters in body.
      */
     @GetMapping("/characters")
-    public List<Character> getAllCharacters() {
-        log.debug("REST request to get all Characters");
-        return characterRepository.findAll();
+    public List<Character> getAllCharactersByType(@RequestParam(required = false) CharacterType type) {
+        log.debug("REST request to get all Characters with a optional type parameter");
+        if (type != null) {
+            return characterRepository.getAllCharactersByType(type);
+        } else {
+            return characterRepository.findAll();
+        }
     }
 
     /**

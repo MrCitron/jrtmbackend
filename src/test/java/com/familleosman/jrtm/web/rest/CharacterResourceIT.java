@@ -2,8 +2,8 @@ package com.familleosman.jrtm.web.rest;
 
 import com.familleosman.jrtm.JrtmbackendApp;
 import com.familleosman.jrtm.domain.Character;
+import com.familleosman.jrtm.domain.enumeration.CharacterType;
 import com.familleosman.jrtm.repository.CharacterRepository;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +13,7 @@ import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.EntityManager;
 import java.util.List;
 
@@ -20,8 +21,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
-import com.familleosman.jrtm.domain.enumeration.CharacterType;
 /**
  * Integration tests for the {@link CharacterResource} REST controller.
  */
@@ -136,7 +135,7 @@ public class CharacterResourceIT {
             .andExpect(jsonPath("$.[*].type").value(hasItem(DEFAULT_TYPE.toString())))
             .andExpect(jsonPath("$.[*].level").value(hasItem(DEFAULT_LEVEL)));
     }
-    
+
     @Test
     @Transactional
     public void getCharacter() throws Exception {
